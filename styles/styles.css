@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+:root{
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 375px;
+    margin: auto;
+    /* margin-top: 50px; */
+    border-radius: .625rem;
+    overflow: hidden;
+    box-shadow: 1px 1px 70px rgba(53, 53, 53, 0.222);
+}
+main{
+    height: calc(100vh - 1px);
+    display: grid;
+    align-content: center;
+}
+body{
+    background: var(--Light-Gray);
+    width: 100vw;
+    height: 100vh;
+    font-family: 'karla',sans-serif;
+}
+
+.row1{
+    background: #fff;
+    padding: 2rem;
+}
+.row1 h1 {
+    color: var(--Cyan);
+    margin: 1rem 0;
+}
+.row1 h3{
+    color: var(--Bright-Yellow);
+    margin-bottom: 1rem;
+}
+.row1 p{
+    line-height: 1.5;
+    color: var(--Grayish-Blue);
+}
+/* section */
+.row2{
+    background-color: var(--Cyan);
+    color: #fff;
+    padding: 1rem;
+}
+.row2 h2{
+    font-weight: 700;
+    margin: 1rem 0;
+}
+.row2 h3{
+    font-size: 1rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    margin-bottom: .425rem;
+    color:hsl(204, 43%, 93%);
+}
+.row2 h3 span{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-right: 1rem;
+    color: #fff;
+}
+
+
+.btn{
+    width: 100%;
+    padding: 1rem 0;
+    border-radius: 5px;
+    border: none;
+    margin-top: 3rem;
+    background: var(--Bright-Yellow);
+    box-shadow: 1px 1px 10px rgba(53, 53, 53, 0.364);
+    font-family: inherit;
+    color: inherit;
+}
+.row3 {
+    background-color: hsl(179, 65%, 51%);
+    color: #fff;
+    padding: 1rem;
+}
+ul{
+    list-style-type: none;
+}
+ul li{
+    font-weight: 400;
+    line-height: 1.5;
+}
+.row3 h2{
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+@media only screen and (min-width: 768px){
+    .container{
+        width: 700px;
+        display: grid;
+        grid-template-areas: 
+        'row1 row1'
+        'row2 row3';
+    }
+    .container> .row1{
+        grid-area: row1;
+        padding: 2rem;
+    }
+     .row2{
+        grid-area: row2;
+        /* padding: 1rem 2rem 0rem; */
+        padding: 2rem;
+    }
+    .row2 h2{margin-top: 0;}
+    .row3{
+        grid-area: row3;
+        padding: 2rem;
+    }
+    
+}
